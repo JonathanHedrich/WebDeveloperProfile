@@ -1,20 +1,22 @@
 export function initScrollAnimations(): void {
-  const revealElements = document.querySelectorAll<HTMLElement>('.reveal');
+  const animatedElements = document.querySelectorAll<HTMLElement>(
+    ".reveal, .reveal-left, .reveal-right",
+  );
 
   const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('active');
+          entry.target.classList.add("active");
         }
       });
     },
     {
-      threshold: 0.2,
-    }
+      threshold: 0.18,
+    },
   );
 
-  revealElements.forEach(element => {
+  animatedElements.forEach((element) => {
     observer.observe(element);
   });
 }

@@ -1,7 +1,7 @@
 export function Navbar(): string {
   return `
     <header class="navbar">
-      <a href="#" class="logo">Johnny.dev</a>
+      <a href="#" class="logo">Jonathan Hedrich</a>
 
       <nav class="nav-links">
         <a href="#about">About</a>

@@ -5,6 +5,7 @@ export function initPreloader(): void {
   const percent = document.querySelector<HTMLSpanElement>("#loader-percent");
   const loaderText = document.querySelector<HTMLElement>("#loader-text");
   const appContent = document.querySelector<HTMLDivElement>("#main-content");
+  const siteShell = document.querySelector<HTMLDivElement>("#site-shell");
 
   if (
     !preloader ||
@@ -12,7 +13,8 @@ export function initPreloader(): void {
     !progress ||
     !percent ||
     !loaderText ||
-    !appContent
+    !appContent ||
+    !siteShell
   ) {
     return;
   }
@@ -52,6 +54,7 @@ export function initPreloader(): void {
       }, 1700);
 
       window.setTimeout(() => {
+        siteShell.classList.add("site-visible");
         appContent.classList.add("content-visible");
         preloader.classList.add("preloader-hidden");
       }, 2700);
