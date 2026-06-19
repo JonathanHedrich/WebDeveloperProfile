@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .hero,
+  .section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero-orb {
+    width: 320px;
+    height: 320px;
+    right: -120px;
+  }
+
+  .hero-text,
+  .section-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+}
