@@ -1,18 +1,37 @@
 import './styles/global.css';
+import './styles/preloader.css';
 import './styles/animations.css';
 import './styles/responsive.css';
 
+import { Preloader } from './components/preloader';
 import { Navbar } from './components/navbar';
+import { Hero } from './sections/hero';
+import { About } from './sections/about';
 import { Skills } from './sections/skills';
 import { Projects } from './sections/projects';
-import { About } from './sections/about';
+
+import { initPreloader } from './animations/preloader';
+import { initParticleNetwork } from './animations/particleNetwork';
 import { initScrollAnimations } from './animations/scrollAnimations';
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  ${Navbar()}
-  ${Skills()}
-  ${Projects()}
-  ${About()}
+const app = document.querySelector<HTMLDivElement>('#app');
+
+if (!app) {
+  throw new Error('App element not found');
+}
+
+app.innerHTML = `
+  ${Preloader()}
+
+  <div id="main-content" class="main-content">
+    ${Navbar()}
+    ${Hero()}
+    ${About()}
+    ${Skills()}
+    ${Projects()}
+  </div>
 `;
 
+initParticleNetwork();
+initPreloader();
 initScrollAnimations();

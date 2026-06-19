@@ -4,7 +4,11 @@ type ProjectCardProps = {
   tech: string;
 };
 
-export function ProjectCard({ title, description, tech }: ProjectCardProps): string {
+export function ProjectCard({
+  title,
+  description,
+  tech,
+}: ProjectCardProps): string {
   return `
     <article class="project-card reveal">
       <span>${tech}</span>

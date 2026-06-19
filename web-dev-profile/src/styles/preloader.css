@@ -1,0 +1,351 @@
+/* ==================================================
+   PRELOADER
+================================================== */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #020617;
+
+  z-index: 9999;
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease,
+    transform 1s ease;
+}
+
+.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.03);
+}
+
+/* ==================================================
+   PARTICLE CANVAS
+================================================== */
+
+#particle-canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+/* ==================================================
+   NAME
+================================================== */
+
+.preloader-name {
+  position: absolute;
+
+  top: 30px;
+  left: 40px;
+
+  z-index: 5;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  color: #572ac0;
+}
+
+/* ==================================================
+   MARQUEE
+================================================== */
+
+.marquee {
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.marquee-top {
+  top: 21%;
+}
+
+.marquee-bottom {
+  bottom: 22%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee-track span {
+  flex-shrink: 0;
+
+  padding-right: 140px;
+
+  white-space: nowrap;
+
+  font-size: clamp(90px, 11vw, 220px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -8px;
+
+  color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==================================================
+   MARQUEE ANIMATION
+================================================== */
+
+.marquee-left {
+  animation: marqueeLeft 18s linear infinite;
+}
+
+.marquee-right {
+  animation: marqueeRight 18s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ==================================================
+   LOADER
+================================================== */
+
+.loader-pill {
+  position: relative;
+  z-index: 10;
+
+  width: 520px;
+  max-width: 90vw;
+
+  height: 100px;
+
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 999px;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  backdrop-filter: blur(20px);
+
+  border: 3px solid #8b5cf6;
+
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.25),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+
+  transition:
+    width 0.6s ease,
+    transform 1.1s cubic-bezier(0.76, 0, 0.24, 1),
+    background 0.6s ease,
+    border-color 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.loader-pill strong {
+  color: white;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+#loader-percent {
+  min-width: 60px;
+
+  color: #8b5cf6;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.loader-bar {
+  flex: 1;
+
+  height: 10px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#loader-progress {
+  width: 0%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, #8b5cf6, #a855f7);
+
+  transition: width 0.15s linear;
+}
+
+/* ==================================================
+   LOADER COMPLETE
+================================================== */
+
+.loader-complete {
+  width: 330px;
+
+  justify-content: center;
+  gap: 0;
+
+  background: #000000;
+
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 60px rgba(139, 92, 246, 0.55),
+    0 30px 80px rgba(139, 92, 246, 0.35);
+}
+
+.loader-complete .loader-bar,
+.loader-complete #loader-percent {
+  display: none;
+}
+
+.loader-complete strong {
+  color: white;
+
+  letter-spacing: 2px;
+}
+
+/* ==================================================
+   WILLKOMMEN DISSOLVE
+================================================== */
+
+.loader-dissolve span {
+  display: inline-block;
+
+  animation: dissolveLetters 0.85s forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes dissolveLetters {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  35% {
+    color: #a855f7;
+
+    text-shadow:
+      0 0 10px rgba(168, 85, 247, 0.8),
+      0 0 20px rgba(168, 85, 247, 0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-34px) scale(0.85);
+    filter: blur(8px);
+  }
+}
+
+/* ==================================================
+   PRELOADER ZOOM
+================================================== */
+
+.preloader-zoom .loader-pill {
+  transform: scale(35);
+
+  background: #000000;
+  border-color: #8b5cf6;
+}
+
+.preloader-zoom .marquee,
+.preloader-zoom .preloader-name,
+.preloader-zoom #particle-canvas {
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1200px) {
+  .marquee-track span {
+    font-size: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .preloader-name {
+    top: 24px;
+    left: 24px;
+  }
+
+  .marquee-track span {
+    font-size: 90px;
+    letter-spacing: -4px;
+  }
+
+  .loader-pill {
+    height: 80px;
+    padding: 0 22px;
+  }
+
+  .loader-pill strong,
+  #loader-percent {
+    font-size: 16px;
+  }
+
+  .loader-complete {
+    width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-top {
+    top: 30%;
+  }
+
+  .marquee-bottom {
+    bottom: 30%;
+  }
+
+  .marquee-track span {
+    font-size: 60px;
+    padding-right: 80px;
+  }
+}

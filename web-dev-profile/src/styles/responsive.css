@@ -14,20 +14,31 @@
     padding-right: 5%;
   }
 
-  .hero-orb {
-    width: 320px;
-    height: 320px;
-    right: -120px;
-  }
-
   .hero-text,
   .section-text {
     font-size: 18px;
+  }
+
+  .loader-pill {
+    height: 82px;
+    padding: 0 24px;
+  }
+
+  .loader-pill strong {
+    font-size: 18px;
+  }
+
+  .loader-pill span {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .nav-links {
     display: none;
+  }
+
+  .preloader-title {
+    font-size: 56px;
   }
 }
