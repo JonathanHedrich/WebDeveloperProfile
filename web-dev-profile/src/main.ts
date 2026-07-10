@@ -49,10 +49,10 @@ initScrollAnimations();
 
 initParticleNetwork({
   selector: "#skills-particle-canvas",
-  particleCount: 110,
-  maxDistance: 165,
+  particleCount: 210,
+  maxDistance: 105,
   mouseDistance: 220,
-  speed: 0.35,
+  speed: 0.55,
   particleColor: "220, 210, 255",
   lineColor: "160, 110, 255",
   mouseLineColor: "34, 211, 238",
