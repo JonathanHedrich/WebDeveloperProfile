@@ -138,10 +138,6 @@ if (CONFIG.development.skipPreloader) {
   }, 4000);
 }
 
-/* ==================================================
-   CLEANUP
-================================================== */
-
 window.addEventListener("beforeunload", () => {
   skillsParticles?.destroy();
   contactParticles?.destroy();

@@ -100,6 +100,21 @@ export function Contact(): string {
             class="contact-form"
             novalidate
           >
+
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="contact-secondary-address">
+                Leave this field empty
+              </label>
+
+              <input
+                id="contact-secondary-address"
+                name="secondaryAddress"
+                type="text"
+                value=""
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
             <div class="form-row">
               <div class="form-field">
                 <label for="first-name">

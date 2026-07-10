@@ -1999,6 +1999,46 @@ h2 {
 .contact-submit:hover::before {
   transform: rotate(25deg) translateX(650%);
 }
+/* ==================================================
+   Contact Server
+================================================== */
+
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+}
+
+/* ==================================================
+   Contact Server - Spinner
+================================================== */
+
+.contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.contact-submit-spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+
+  animation: contactSpinner 0.7s linear infinite;
+}
+
+@keyframes contactSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* ==================================================
    CONTACT BACKGROUND
