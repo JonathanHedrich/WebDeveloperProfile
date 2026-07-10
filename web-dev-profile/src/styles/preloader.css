@@ -5,21 +5,16 @@
 .preloader {
   position: fixed;
   inset: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  overflow: hidden;
-
-  background: #020617;
-
   z-index: 9999;
 
-  transition:
-    opacity 1s ease,
-    visibility 1s ease,
-    transform 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #020617;
 }
 
 .preloader-hidden {
@@ -35,13 +30,12 @@
 #preloader-particle-canvas {
   position: absolute;
   inset: 0;
-  z-index: 0;
-
-  display: block;
+  z-index: -999;
 
   width: 100%;
   height: 100%;
 
+  display: block;
   pointer-events: auto;
 }
 
@@ -81,14 +75,12 @@
 .marquee {
   position: absolute;
   left: 0;
+  z-index: 2;
 
   width: 100%;
-
   overflow: hidden;
 
   pointer-events: none;
-
-  z-index: 1;
 }
 
 .marquee-top {
@@ -106,6 +98,7 @@
 
 .marquee-track span {
   flex-shrink: 0;
+  z-index: -2000;
 
   padding-right: 140px;
 
@@ -307,9 +300,8 @@
 
 .preloader-zoom .marquee,
 .preloader-zoom .preloader-name,
-.preloader-zoom #particle-canvas {
+.preloader-zoom #preloader-particle-canvas {
   opacity: 0;
-
   transition: opacity 0.5s ease;
 }
 
@@ -337,6 +329,8 @@
   .loader-pill {
     height: 80px;
     padding: 0 22px;
+    position: relative;
+    z-index: 4;
   }
 
   .loader-pill strong,
@@ -361,5 +355,87 @@
   .marquee-track span {
     font-size: 60px;
     padding-right: 80px;
+  }
+}
+
+/* ==================================================
+   ABOUT RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .about-image {
+    align-items: center;
+  }
+
+  .about-kicker {
+    width: min(100%, 520px);
+    align-self: center;
+  }
+
+  .about-image-frame {
+    width: min(100%, 520px);
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-content {
+    width: min(100%, 760px);
+    margin: 0 auto;
+  }
+
+  .about-title {
+    font-size: clamp(38px, 7vw, 62px);
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about-kicker {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .about-image-frame {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 22px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-title {
+    margin-bottom: 26px;
+
+    font-size: clamp(32px, 10vw, 48px);
+    line-height: 1.12;
+  }
+
+  .about-text {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-title {
+    font-size: 30px;
+  }
+
+  .about-text {
+    font-size: 16px;
   }
 }
