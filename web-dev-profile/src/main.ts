@@ -26,6 +26,7 @@ import { initScrollAnimations } from "./animations/scrollAnimations";
 
 import { initContactForm } from "./scripts/contactForm";
 import { initScrollUi } from "./scripts/scrollUi";
+import { initLegalFooter } from "./scripts/legalFooter";
 
 const app = document.querySelector<HTMLDivElement>("#app");
 
@@ -66,6 +67,7 @@ app.innerHTML = `
 initScrollAnimations();
 initScrollUi();
 initContactForm();
+initLegalFooter();
 
 /* ==================================================
    SKILLS PARTICLE NETWORK

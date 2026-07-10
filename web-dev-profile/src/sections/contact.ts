@@ -216,8 +216,14 @@ export function Contact(): string {
 
               <span>
                 I have read the
-                <a href="#privacy">privacy information</a>
-                and agree to the processing of my message.
+                <a 
+                  href="#privacy"
+                  data-legal-target="privacy"
+                  aria-controls="footer-legal-panel"
+                  aria-expanded="false">
+                  Privacy Policy
+                </a>
+                 and agree that my information may be processed in order to respond to my inquiry.
               </span>
             </label>
 

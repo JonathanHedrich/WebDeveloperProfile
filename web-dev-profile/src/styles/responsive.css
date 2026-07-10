@@ -324,3 +324,41 @@
     display: none;
   }
 }
+
+@media (max-width: 800px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .footer-legal-inner {
+    padding: 28px 22px;
+    border-radius: 22px;
+  }
+
+  .footer-legal-close {
+    top: 12px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  .footer-legal-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

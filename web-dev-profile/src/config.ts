@@ -1,5 +1,5 @@
 export const CONFIG = {
   development: {
-    skipPreloader: false,
+    skipPreloader: true,
   },
 } as const;
