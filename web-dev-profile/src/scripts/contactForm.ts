@@ -18,18 +18,16 @@ export function initContactForm(): void {
 
   const originalButtonContent = submitButton.innerHTML;
 
-  form.addEventListener("submit", async (event) => {
+  form.addEventListener("submit", async (event: SubmitEvent) => {
     event.preventDefault();
 
-    status.textContent = "";
-    status.classList.remove("success", "error");
+    clearStatus(status);
 
     if (!form.checkValidity()) {
       form.reportValidity();
 
-      status.textContent = "Please complete all required fields.";
+      showStatus(status, "Please complete all required fields.", "error");
 
-      status.classList.add("error");
       return;
     }
 
@@ -37,11 +35,16 @@ export function initContactForm(): void {
 
     const payload = {
       firstName: getFormValue(formData, "firstName"),
+
       lastName: getFormValue(formData, "lastName"),
+
       email: getFormValue(formData, "email"),
+
       subject: getFormValue(formData, "subject"),
+
       message: getFormValue(formData, "message"),
-      website: getFormValue(formData, "website"),
+
+      secondaryAddress: getFormValue(formData, "secondaryAddress"),
     };
 
     setSubmittingState(submitButton, true, originalButtonContent);
@@ -57,27 +60,46 @@ export function initContactForm(): void {
         body: JSON.stringify(payload),
       });
 
-      const result = (await response.json()) as ContactApiResponse;
+      const result = await readApiResponse(response);
 
       if (!response.ok || !result.success) {
         throw new Error(result.message || "The message could not be sent.");
       }
 
-      status.textContent = result.message;
-      status.classList.add("success");
+      showStatus(status, result.message, "success");
 
       form.reset();
     } catch (error: unknown) {
-      status.textContent =
+      const message =
         error instanceof Error
           ? error.message
           : "The message could not be sent. Please try again later.";
 
-      status.classList.add("error");
+      showStatus(status, message, "error");
     } finally {
       setSubmittingState(submitButton, false, originalButtonContent);
     }
   });
+}
+
+async function readApiResponse(
+  response: Response,
+): Promise<ContactApiResponse> {
+  const contentType = response.headers.get("content-type") ?? "";
+
+  if (!contentType.includes("application/json")) {
+    const responseText = await response.text();
+
+    console.error("Contact API returned a non-JSON response:", responseText);
+
+    if (response.status === 404) {
+      throw new Error("The contact API could not be found.");
+    }
+
+    throw new Error("The contact service returned an invalid response.");
+  }
+
+  return (await response.json()) as ContactApiResponse;
 }
 
 function getFormValue(formData: FormData, fieldName: string): string {
@@ -86,17 +108,34 @@ function getFormValue(formData: FormData, fieldName: string): string {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function clearStatus(status: HTMLParagraphElement): void {
+  status.textContent = "";
+  status.classList.remove("success", "error");
+}
+
+function showStatus(
+  status: HTMLParagraphElement,
+  message: string,
+  type: "success" | "error",
+): void {
+  status.textContent = message;
+  status.classList.remove("success", "error");
+  status.classList.add(type);
+}
+
 function setSubmittingState(
   button: HTMLButtonElement,
   isSubmitting: boolean,
   originalContent: string,
 ): void {
   button.disabled = isSubmitting;
+
   button.setAttribute("aria-busy", String(isSubmitting));
 
   button.innerHTML = isSubmitting
     ? `
         <span>Sending...</span>
+
         <span
           class="contact-submit-spinner"
           aria-hidden="true"
