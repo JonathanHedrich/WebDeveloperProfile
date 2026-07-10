@@ -1,3 +1,5 @@
+import profileImage from "../assets/images/profile01.jpg";
+
 export function About(): string {
   return `
     <section id="about" class="section about">
@@ -12,7 +14,7 @@ export function About(): string {
 
           <div class="about-image-frame">
             <img
-              src="src/assets/images/profile01.jpg"
+              src="${profileImage}"
               alt="Jonathan Hedrich"
             />
           </div>

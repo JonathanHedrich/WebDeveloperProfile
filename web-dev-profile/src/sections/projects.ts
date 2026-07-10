@@ -1,4 +1,7 @@
 import { ProjectCard, type ProjectCardProps } from "../components/projectCard";
+import forgeTestModdingImage from "../assets/images/projects/ProjectCard-ForgeTestModding.png";
+import cateriumModImage from "../assets/images/projects/ProjectCard-CateriumMinecraftMod.png";
+import webDevProfileImage from "../assets/images/projects/ProjectCard-DevWebpage01.png";
 
 const projects: Omit<ProjectCardProps, "index">[] = [
   {
@@ -7,7 +10,7 @@ const projects: Omit<ProjectCardProps, "index">[] = [
     description:
       "A responsive developer portfolio built with TypeScript, HTML, CSS, and Vite. It features a custom preloader, scroll-triggered animations, interactive particle backgrounds, project showcases, and a contact form connected to an Express backend.",
     technologies: ["TypeScript", "HTML", "CSS", "Vite", "Express", "Node.js"],
-    image: "src/assets/images/projects/ProjectCard-DevWebpage01.png",
+    image: webDevProfileImage,
     url: "https://github.com/JonathanHedrich/WebDeveloperProfile",
   },
   {
@@ -16,7 +19,7 @@ const projects: Omit<ProjectCardProps, "index">[] = [
     description:
       "A private Java-based Minecraft modding project created to explore custom content creation, gameplay mechanics, and world generation by developing new blocks, items, and custom ore generation.",
     technologies: ["Java", "Minecraft", "Modding", "Gradle"],
-    image: "src/assets/images/projects/ProjectCard-CateriumMinecraftMod.png",
+    image: cateriumModImage,
     url: "https://github.com/JonathanHedrich/CateriumMod",
   },
   {
@@ -25,7 +28,7 @@ const projects: Omit<ProjectCardProps, "index">[] = [
     description:
       "A private development and testing project for experimenting with Minecraft Forge 1.20.x, including mod setup, custom features, event handling, and Forge APIs.",
     technologies: ["Java", "Minecraft Forge", "Gradle", "Modding"],
-    image: "src/assets/images/projects/ProjectCard-ForgeTestModding.png",
+    image: forgeTestModdingImage,
     url: "https://github.com/JonathanHedrich/Forge-Test-Modding-1.20.X",
   },
 ];
