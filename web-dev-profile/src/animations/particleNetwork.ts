@@ -6,11 +6,11 @@ type Particle = {
 };
 
 export function initParticleNetwork(): void {
-  const canvas = document.querySelector<HTMLCanvasElement>('#particle-canvas');
+  const canvas = document.querySelector<HTMLCanvasElement>("#particle-canvas");
 
   if (!canvas) return;
 
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
   if (!ctx) return;
 
@@ -48,7 +48,7 @@ export function initParticleNetwork(): void {
   function drawParticles(): void {
     context.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
-    particles.forEach(particle => {
+    particles.forEach((particle) => {
       particle.x += particle.vx;
       particle.y += particle.vy;
 
@@ -62,7 +62,7 @@ export function initParticleNetwork(): void {
 
       context.beginPath();
       context.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
-      context.fillStyle = 'rgba(255, 255, 255, 0.35)';
+      context.fillStyle = "rgba(255, 255, 255, 0.35)";
       context.fill();
     });
   }
@@ -91,7 +91,7 @@ export function initParticleNetwork(): void {
   function drawMouseLines(): void {
     if (!mouse.active) return;
 
-    particles.forEach(particle => {
+    particles.forEach((particle) => {
       const dx = particle.x - mouse.x;
       const dy = particle.y - mouse.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
@@ -117,18 +117,18 @@ export function initParticleNetwork(): void {
     window.requestAnimationFrame(animate);
   }
 
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     resizeCanvas();
     createParticles();
   });
 
-  window.addEventListener('mousemove', event => {
+  window.addEventListener("mousemove", (event) => {
     mouse.x = event.clientX;
     mouse.y = event.clientY;
     mouse.active = true;
   });
 
-  window.addEventListener('mouseleave', () => {
+  window.addEventListener("mouseleave", () => {
     mouse.active = false;
   });
 

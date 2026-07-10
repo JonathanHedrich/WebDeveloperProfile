@@ -1,20 +1,22 @@
-import { ProjectCard } from '../components/projectCard';
+import { ProjectCard } from "../components/projectCard";
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    description: 'Eine moderne Developer-Portfolio-Seite mit Scroll Animationen.',
-    tech: 'HTML / CSS / TS',
+    title: "Portfolio Website",
+    description:
+      "Eine moderne Developer-Portfolio-Seite mit Scroll Animationen.",
+    tech: "HTML / CSS / TS",
   },
   {
-    title: 'Dashboard UI',
-    description: 'Ein responsives Dashboard mit Cards, Navigation und Animationen.',
-    tech: 'TypeScript',
+    title: "Dashboard UI",
+    description:
+      "Ein responsives Dashboard mit Cards, Navigation und Animationen.",
+    tech: "TypeScript",
   },
   {
-    title: 'Landing Page',
-    description: 'Eine performante Landing Page mit starkem Hero-Bereich.',
-    tech: 'CSS Animations',
+    title: "Landing Page",
+    description: "Eine performante Landing Page mit starkem Hero-Bereich.",
+    tech: "CSS Animations",
   },
 ];
 
@@ -27,7 +29,14 @@ export function Projects(): string {
       </div>
 
       <div class="projects-grid">
-        ${projects.map(project => ProjectCard(project)).join('')}
+        ${projects
+          .map((project, index) =>
+            ProjectCard({
+              ...project,
+              index,
+            }),
+          )
+          .join("")}
       </div>
     </section>
   `;

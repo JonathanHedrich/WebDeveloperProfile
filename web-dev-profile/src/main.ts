@@ -3,8 +3,11 @@ import "./styles/preloader.css";
 import "./styles/animations.css";
 import "./styles/responsive.css";
 
+import { CONFIG } from "./config";
+
 import { Preloader } from "./components/preloader";
 import { Navbar } from "./components/navbar";
+
 import { Hero } from "./sections/hero";
 import { About } from "./sections/about";
 import { Skills } from "./sections/skills";
@@ -35,6 +38,23 @@ app.innerHTML = `
   </div>
 `;
 
+/* ==========================================
+   Animationen initialisieren
+========================================== */
+
 initParticleNetwork();
-initPreloader();
 initScrollAnimations();
+
+/* ==========================================
+   Development Mode
+========================================== */
+
+if (CONFIG.development.skipPreloader) {
+  document.querySelector("#preloader")?.remove();
+
+  document.querySelector("#site-shell")?.classList.add("site-visible");
+
+  document.querySelector("#main-content")?.classList.add("content-visible");
+} else {
+  initPreloader();
+}

@@ -42,3 +42,49 @@
     font-size: 56px;
   }
 }
+
+@media (max-width: 1000px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "role"
+      "bottom";
+
+    row-gap: 48px;
+  }
+
+  .hero-role {
+    margin-left: 12%;
+  }
+
+  .hero-role-title span {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 110px 6% 70px;
+  }
+
+  .hero-role {
+    margin-left: 0;
+  }
+
+  .hero-name {
+    font-size: clamp(54px, 17vw, 86px);
+  }
+
+  .hero-role-title {
+    font-size: clamp(42px, 13vw, 72px);
+  }
+
+  .hero-bottom {
+    max-width: 100%;
+  }
+}

@@ -1,14 +1,14 @@
-import { SkillBadge } from '../components/skillBadge';
+import { SkillBadge } from "../components/skillBadge";
 
 const skills = [
-  'HTML',
-  'CSS',
-  'TypeScript',
-  'Responsive Design',
-  'Animations',
-  'Git',
-  'VS Code',
-  'UI Design',
+  "HTML",
+  "CSS",
+  "TypeScript",
+  "Responsive Design",
+  "Animations",
+  "Git",
+  "VS Code",
+  "UI Design",
 ];
 
 export function Skills(): string {
@@ -20,7 +20,7 @@ export function Skills(): string {
       </div>
 
       <div class="skills-grid">
-        ${skills.map(skill => SkillBadge(skill)).join('')}
+        ${skills.map((skill, index) => SkillBadge(skill, index)).join("")}
       </div>
     </section>
   `;
