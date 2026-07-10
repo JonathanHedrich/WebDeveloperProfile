@@ -64,7 +64,7 @@ export function Footer(): string {
 
               <address>
                 Jonathan Hedrich<br />
-                Zirkoonstraße 21<br />
+                Zirkonstraße 21<br />
                 04319 Leipzig<br />
                 Germany
               </address>
@@ -131,7 +131,7 @@ export function Footer(): string {
 
               <address>
                 Jonathan Hedrich<br />
-                Zirkoonstraße 21<br />
+                Zirkonstraße 21<br />
                 04319 Leipzig<br />
                 Germany
               </address>
