@@ -2,58 +2,31 @@ import { ProjectCard, type ProjectCardProps } from "../components/projectCard";
 
 const projects: Omit<ProjectCardProps, "index">[] = [
   {
-    title: "Developer Portfolio",
+    title: "WebDeveloperProfile",
     category: "Frontend Development",
     description:
-      "A modern developer portfolio featuring a custom preloader, interactive animations, smooth scrolling, responsive layouts, and a clean component-based architecture.",
-    technologies: ["HTML", "CSS", "TypeScript", "Vite"],
-    image: "/projects/portfolio.jpg",
-    url: "https://github.com/",
+      "A responsive developer portfolio built with TypeScript, HTML, CSS, and Vite. It features a custom preloader, scroll-triggered animations, interactive particle backgrounds, project showcases, and a contact form connected to an Express backend.",
+    technologies: ["TypeScript", "HTML", "CSS", "Vite", "Express", "Node.js"],
+    image: "src/assets/images/projects/ProjectCard-DevWebpage01.png",
+    url: "https://github.com/JonathanHedrich/WebDeveloperProfile",
   },
   {
-    title: "AI Development Project",
-    category: "Artificial Intelligence",
+    title: "CateriumMod",
+    category: "Minecraft Mod Development",
     description:
-      "An AI-powered application built with a scalable architecture, modern user interface, and intelligent workflows focused on performance and usability.",
-    technologies: ["Python", "AI", "Cloud", "REST API"],
-    image: "/projects/ai-project.jpg",
-    url: "https://github.com/",
+      "A private Java-based Minecraft modding project created to explore custom content creation, gameplay mechanics, and world generation by developing new blocks, items, and custom ore generation.",
+    technologies: ["Java", "Minecraft", "Modding", "Gradle"],
+    image: "src/assets/images/projects/ProjectCard-CateriumMinecraftMod.png",
+    url: "https://github.com/JonathanHedrich/CateriumMod",
   },
   {
-    title: "Cloud Application",
-    category: "Cloud Computing",
+    title: "Forge Test Modding 1.20.X",
+    category: "Minecraft Forge Development",
     description:
-      "A cloud-native application focused on deployment, scalability, automation, and modern software architecture using industry best practices.",
-    technologies: ["Azure", "Docker", "Linux", "Git"],
-    image: "/projects/cloud-project.jpg",
-    url: "https://github.com/",
-  },
-  {
-    title: "Dashboard UI",
-    category: "Frontend Development",
-    description:
-      "A responsive dashboard interface featuring reusable components, data visualization, intuitive navigation, and a modern user experience.",
-    technologies: ["TypeScript", "CSS", "Responsive UI"],
-    image: "/projects/dashboard.jpg",
-    url: "https://github.com/",
-  },
-  {
-    title: "Java Application",
-    category: "Software Development",
-    description:
-      "An object-oriented Java application developed with a focus on maintainability, modular architecture, and clean software design principles.",
-    technologies: ["Java", "OOP", "Git"],
-    image: "/projects/java-project.jpg",
-    url: "https://github.com/",
-  },
-  {
-    title: "Landing Page",
-    category: "Web Design",
-    description:
-      "A modern landing page designed with engaging animations, responsive layouts, optimized performance, and a strong visual identity.",
-    technologies: ["HTML", "CSS", "Animations"],
-    image: "/projects/landing-page.jpg",
-    url: "https://github.com/",
+      "A private development and testing project for experimenting with Minecraft Forge 1.20.x, including mod setup, custom features, event handling, and Forge APIs.",
+    technologies: ["Java", "Minecraft Forge", "Gradle", "Modding"],
+    image: "src/assets/images/projects/ProjectCard-ForgeTestModding.png",
+    url: "https://github.com/JonathanHedrich/Forge-Test-Modding-1.20.X",
   },
 ];
 

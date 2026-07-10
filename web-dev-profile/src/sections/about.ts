@@ -12,7 +12,7 @@ export function About(): string {
 
           <div class="about-image-frame">
             <img
-              src="/profile.jpg"
+              src="src/assets/images/profile01.jpg"
               alt="Jonathan Hedrich"
             />
           </div>
