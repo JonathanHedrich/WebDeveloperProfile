@@ -2,6 +2,7 @@ import "./styles/global.css";
 import "./styles/preloader.css";
 import "./styles/animations.css";
 import "./styles/responsive.css";
+import "devicon/devicon.min.css";
 
 import { CONFIG } from "./config";
 
@@ -10,6 +11,7 @@ import { Navbar } from "./components/navbar";
 
 import { Hero } from "./sections/hero";
 import { About } from "./sections/about";
+import { Experience } from "./sections/experience";
 import { Skills } from "./sections/skills";
 import { Projects } from "./sections/projects";
 
@@ -32,6 +34,7 @@ app.innerHTML = `
     <main id="main-content" class="main-content">
       ${Hero()}
       ${About()}
+      ${Experience()}
       ${Skills()}
       ${Projects()}
     </main>
@@ -39,14 +42,24 @@ app.innerHTML = `
 `;
 
 /* ==========================================
-   Animationen initialisieren
+   Website-Animationen
 ========================================== */
 
-initParticleNetwork();
 initScrollAnimations();
 
+initParticleNetwork({
+  selector: "#skills-particle-canvas",
+  particleCount: 110,
+  maxDistance: 165,
+  mouseDistance: 220,
+  speed: 0.35,
+  particleColor: "220, 210, 255",
+  lineColor: "160, 110, 255",
+  mouseLineColor: "34, 211, 238",
+});
+
 /* ==========================================
-   Development Mode
+   Preloader
 ========================================== */
 
 if (CONFIG.development.skipPreloader) {
@@ -56,5 +69,24 @@ if (CONFIG.development.skipPreloader) {
 
   document.querySelector("#main-content")?.classList.add("content-visible");
 } else {
+  const preloaderParticles = initParticleNetwork({
+    selector: "#preloader-particle-canvas",
+    particleCount: 85,
+    maxDistance: 145,
+    mouseDistance: 180,
+    speed: 0.45,
+    particleColor: "255, 255, 255",
+    lineColor: "255, 255, 255",
+    mouseLineColor: "139, 92, 246",
+  });
+
   initPreloader();
+
+  /*
+   * Dein Preloader wird nach ungefähr 3,7 Sekunden entfernt.
+   * Anschließend stoppen wir auch dessen Animationsschleife.
+   */
+  window.setTimeout(() => {
+    preloaderParticles?.destroy();
+  }, 4000);
 }

@@ -1,7 +1,11 @@
 export function Preloader(): string {
   return `
     <div id="preloader" class="preloader">
-      <canvas id="particle-canvas"></canvas>
+      <canvas
+        id="preloader-particle-canvas"
+        class="particle-canvas"
+        aria-hidden="true"
+      ></canvas>
 
       <div class="preloader-name">
         Jonathan Hedrich
@@ -9,13 +13,17 @@ export function Preloader(): string {
 
       <div class="marquee marquee-top">
         <div class="marquee-track marquee-left">
-          <span>WEB DEVELOPER • WEB DEVELOPER • WEB DEVELOPER • WEB DEVELOPER •</span>
+          <span>
+            WEB DEVELOPER • WEB DEVELOPER • WEB DEVELOPER • WEB DEVELOPER •
+          </span>
         </div>
       </div>
 
       <div class="marquee marquee-bottom">
         <div class="marquee-track marquee-right">
-          <span>FRONTEND DEVELOPER • FRONTEND DEVELOPER • FRONTEND DEVELOPER • FRONTEND DEVELOPER •</span>
+          <span>
+            FRONTEND DEVELOPER • FRONTEND DEVELOPER • FRONTEND DEVELOPER • FRONTEND DEVELOPER •
+          </span>
         </div>
       </div>
 

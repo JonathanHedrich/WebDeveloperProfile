@@ -27,13 +27,14 @@ export function Hero(): string {
 
         <div class="hero-bottom">
           <p class="hero-description reveal delay-2">
-            Ich entwickle moderne, responsive und animierte Webseiten mit
-            HTML, CSS und TypeScript. Mein Fokus liegt auf klarer Gestaltung,
-            sauberem Code und einer angenehmen User Experience.
+            I develop modern, responsive, and animated websites 
+            using HTML, CSS, and TypeScript. 
+            My focus is on clear design, clean code, 
+            and a pleasant user experience.
           </p>
 
           <a href="#projects" class="btn reveal delay-3">
-            Projekte ansehen
+            View projects
           </a>
         </div>
 
