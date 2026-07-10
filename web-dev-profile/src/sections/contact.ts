@@ -39,7 +39,7 @@ export function Contact(): string {
             <div class="contact-details">
               <a
                 class="contact-detail"
-                href="mailto:jona2005le@gmail.com"
+                href="mailto:personalcontact.jhedrich@gmail.com"
               >
                 <span class="contact-detail-icon" aria-hidden="true">
                    <i class="bi bi-envelope-fill"></i>
@@ -47,7 +47,7 @@ export function Contact(): string {
 
                 <span>
                   <small>Email</small>
-                  <strong>jona2005le@gmail.com</strong>
+                  <strong>personalcontact.jhedrich@gmail.com</strong>
                 </span>
               </a>
 
@@ -159,7 +159,7 @@ export function Contact(): string {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="jona2005le@gmail.com"
+                placeholder="personalcontact.jhedrich@gmail.com"
                 autocomplete="email"
                 required
               />
