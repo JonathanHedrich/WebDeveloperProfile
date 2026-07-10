@@ -363,14 +363,14 @@ export function Skills(): string {
 
         <div class="skill-groups">
           ${createSkillGroup(
-            "Advanced Skills",
-            "Technologies and areas of expertise I have worked with intensively.",
+            "Skills",
+            "Technologies and areas of expertise I have worked with.",
             "advanced",
           )}
 
           ${createSkillGroup(
-            "Basic Skills",
-            "Tools and topics in which I have gained initial practical experience.",
+            "Core Skills",
+            "Core tools and concepts that every practitioner should be familiar with.",
             "basic",
           )}
         </div>
