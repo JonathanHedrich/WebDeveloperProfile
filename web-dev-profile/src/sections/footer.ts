@@ -60,14 +60,6 @@ export function Footer(): string {
             <h2>Imprint</h2>
 
             <div class="legal-content">
-              <h3>Information according to § 5 DDG</h3>
-
-              <address>
-                Jonathan Hedrich<br />
-                Zirkonstraße 21<br />
-                04319 Leipzig<br />
-                Germany
-              </address>
 
               <h3>Contact</h3>
 
@@ -128,13 +120,6 @@ export function Footer(): string {
                 The controller responsible for processing personal data on this
                 website is:
               </p>
-
-              <address>
-                Jonathan Hedrich<br />
-                Zirkonstraße 21<br />
-                04319 Leipzig<br />
-                Germany
-              </address>
 
               <p>
                 Email:
