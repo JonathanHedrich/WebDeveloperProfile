@@ -362,3 +362,52 @@
     padding-right: 10px;
   }
 }
+
+/* ==================================================
+   CERTIFICATES RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+  .certificates-heading {
+    margin-bottom: 52px;
+  }
+
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+
+    gap: 22px;
+  }
+
+  .certificate-preview {
+    height: 270px;
+  }
+}
+
+@media (max-width: 560px) {
+  .certificates {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .certificates-heading {
+    text-align: left;
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-preview {
+    height: 250px;
+  }
+
+  .certificate-card-content {
+    padding: 23px;
+  }
+
+  .certificate-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -28,6 +28,9 @@ import { initContactForm } from "./scripts/contactForm";
 import { initScrollUi } from "./scripts/scrollUi";
 import { initLegalFooter } from "./scripts/legalFooter";
 
+import { Certificates } from "./sections/certificates";
+import { initCertificatePreviews } from "./scripts/certificatePreviews";
+
 const app = document.querySelector<HTMLDivElement>("#app");
 
 if (!app) {
@@ -51,6 +54,7 @@ app.innerHTML = `
       ${Experience()}
       ${Skills()}
       ${Projects()}
+      ${Certificates()}
       ${Contact()}
     </main>
 
@@ -68,6 +72,7 @@ initScrollAnimations();
 initScrollUi();
 initContactForm();
 initLegalFooter();
+initCertificatePreviews();
 
 /* ==================================================
    SKILLS PARTICLE NETWORK
