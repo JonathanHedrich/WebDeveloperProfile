@@ -64,6 +64,14 @@ export function Footer(): string {
               <h3>Contact</h3>
 
               <p>
+                Adresse:<br />
+                Jonathan Hedrich<br />
+                Zirkonstraße 21<br />
+                04319 Leipzig<br />
+                Deutschland
+              </p>
+
+              <p>
                 Email:
                 <a href="mailto:personalcontact.jhedrich@gmail.com">
                   personalcontact.jhedrich@gmail.com
@@ -119,6 +127,14 @@ export function Footer(): string {
               <p>
                 The controller responsible for processing personal data on this
                 website is:
+              </p>
+
+              <p>
+                Adresse:<br />
+                Jonathan Hedrich<br />
+                Zirkonstraße 21<br />
+                04319 Leipzig<br />
+                Deutschland
               </p>
 
               <p>
