@@ -2,6 +2,7 @@ import { ProjectCard, type ProjectCardProps } from "../components/projectCard";
 import forgeTestModdingImage from "../assets/images/projects/ProjectCard-ForgeTestModding.png";
 import cateriumModImage from "../assets/images/projects/ProjectCard-CateriumMinecraftMod.png";
 import webDevProfileImage from "../assets/images/projects/ProjectCard-DevWebpage01.png";
+import flipLearnImage from "../assets/images/projects/ProjectCard-FlipLearn-MobileApp.png";
 
 const projects: Omit<ProjectCardProps, "index">[] = [
   {
@@ -30,6 +31,24 @@ const projects: Omit<ProjectCardProps, "index">[] = [
     technologies: ["Java", "Minecraft Forge", "Gradle", "Modding"],
     image: forgeTestModdingImage,
     url: "https://github.com/JonathanHedrich/Forge-Test-Modding-1.20.X",
+  },
+  {
+    title: "FlipLearn",
+    category: "Full-Stack Web Application",
+    description:
+      "A private full-stack flashcard learning application currently in development. FlipLearn is designed for personal use and focuses on creating, organizing, and studying flashcards across web and mobile devices. Public access and complete project documentation will be available after the initial release.",
+    technologies: [
+      "Angular",
+      "Ionic",
+      "Capacitor",
+      "TypeScript",
+      "Spring Boot",
+      "Java",
+      "PostgreSQL",
+      "Docker",
+    ],
+    image: flipLearnImage,
+    url: "",
   },
 ];
 
