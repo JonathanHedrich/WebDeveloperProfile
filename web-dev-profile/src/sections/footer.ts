@@ -64,11 +64,11 @@ export function Footer(): string {
               <h3>Contact</h3>
 
               <p>
-                Adresse:<br />
+                Address:<br />
                 Jonathan Hedrich<br />
                 Zirkonstraße 21<br />
                 04319 Leipzig<br />
-                Deutschland
+                Germany
               </p>
 
               <p>
@@ -130,11 +130,11 @@ export function Footer(): string {
               </p>
 
               <p>
-                Adresse:<br />
+                Address:<br />
                 Jonathan Hedrich<br />
                 Zirkonstraße 21<br />
                 04319 Leipzig<br />
-                Deutschland
+                Germany
               </p>
 
               <p>
@@ -167,9 +167,14 @@ export function Footer(): string {
               </p>
 
               <p>
-                 Server log files are retained in accordance with the hosting provider's 
-                 retention policy, unless longer storage is required to investigate a 
-                 security incident.
+                Further information regarding Vercel's processing of personal
+                data can be found in Vercel's Privacy Policy.
+              </p>
+
+              <p>
+                Server log files are retained in accordance with the hosting provider's
+                retention policy, unless longer storage is required to investigate a
+                security incident.
               </p>
 
               <h3>3. Contact form</h3>
@@ -189,9 +194,11 @@ export function Footer(): string {
               </p>
 
               <p>
-                Form data is transmitted to my Express backend and forwarded to
-                my email inbox through
-                <strong>Google LLC (Gmail)</strong>.
+                Form data is transmitted securely to my Express backend and
+                forwarded to my email inbox via
+                <strong>Google Gmail</strong>.
+                Google may process personal data as an independent controller in
+                accordance with its own Privacy Policy.
               </p>
 
               <p>
@@ -228,25 +235,38 @@ export function Footer(): string {
 
               <p>
                 This website currently does not use analytics, advertising
-                tracking or non-essential cookies.
+                tracking or non-essential cookies. If this changes in the future,
+                this Privacy Policy will be updated accordingly.
               </p>
 
               <h3>8. Recipients of personal data</h3>
 
               <p>
-                Personal data may be processed by technical service providers
-                involved in hosting, email delivery and website security.
+                Personal data may be processed by service providers acting on my
+                behalf, including providers for hosting, email delivery and
+                website security, where necessary for the operation of this
+                website.
               </p>
 
               <h3>9. International data transfers</h3>
 
               <p>
-                Some service providers may process data outside the European
-                Union or the European Economic Area. In that case, appropriate
-                safeguards must be used.
+                Some service providers (such as Vercel and Google) may process
+                personal data outside the European Union or the European Economic
+                Area. Where required, such transfers are based on an adequacy
+                decision of the European Commission or on appropriate safeguards,
+                including the EU Standard Contractual Clauses pursuant to
+                Article 46 GDPR.
               </p>
 
               <h3>10. Storage duration</h3>
+
+              <p>
+                Contact form submissions are not stored in a database. Messages
+                are only transmitted to my email inbox and retained only for as
+                long as necessary to process the inquiry or to comply with legal
+                obligations.
+              </p>
 
               <p>
                 Personal data is stored only for as long as required for the
@@ -257,9 +277,16 @@ export function Footer(): string {
               <h3>11. Your rights</h3>
 
               <p>
-                You have the right to request access, correction, deletion,
-                restriction of processing, data portability and objection,
-                subject to the applicable legal requirements.
+                You have the right to request access to your personal data,
+                rectification, erasure, restriction of processing, data
+                portability and to object to processing, subject to the
+                applicable legal requirements.
+              </p>
+
+              <p>
+                You also have the right to lodge a complaint with a competent
+                supervisory authority if you believe that the processing of your
+                personal data violates the GDPR.
               </p>
 
               <h3>12. Right to object</h3>
@@ -273,9 +300,9 @@ export function Footer(): string {
               <h3>13. Security</h3>
 
               <p>
-                Appropriate technical and organisational measures are used to
-                protect personal data against accidental loss, unauthorised
-                access, alteration or disclosure.
+                Appropriate technical and organisational measures are implemented
+                to protect personal data against accidental or unlawful
+                destruction, loss, alteration, unauthorised disclosure or access.
               </p>
 
               <h3>14. Changes to this Privacy Policy</h3>
