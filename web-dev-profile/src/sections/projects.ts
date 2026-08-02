@@ -3,6 +3,7 @@ import forgeTestModdingImage from "../assets/images/projects/ProjectCard-ForgeTe
 import cateriumModImage from "../assets/images/projects/ProjectCard-CateriumMinecraftMod.png";
 import webDevProfileImage from "../assets/images/projects/ProjectCard-DevWebpage01.png";
 import flipLearnImage from "../assets/images/projects/ProjectCard-FlipLearn-MobileApp.png";
+import percolationLabImage from "../assets/images/projects/ProjectCard-PercolationLab.png";
 
 const projects: Omit<ProjectCardProps, "index">[] = [
   {
@@ -49,6 +50,22 @@ const projects: Omit<ProjectCardProps, "index">[] = [
     ],
     image: flipLearnImage,
     url: "",
+  },
+  {
+    title: "Percolation Lab",
+    category: "Interactive Simulation",
+    description:
+      "A browser-based simulation of site percolation on a two-dimensional lattice. The application demonstrates the emergence of critical thresholds through animated simulations and data visualization, making complex systems and network theory accessible to a broad audience.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Recharts",
+      "Canvas API",
+      "CSS3",
+    ],
+    image: percolationLabImage,
+    url: "https://percolation-lab-simulation.vercel.app/",
   },
 ];
 
