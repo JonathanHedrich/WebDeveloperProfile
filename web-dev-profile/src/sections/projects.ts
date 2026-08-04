@@ -37,7 +37,7 @@ const projects: Omit<ProjectCardProps, "index">[] = [
     title: "FlipLearn",
     category: "Full-Stack Web Application",
     description:
-      "A private full-stack flashcard learning application currently in development. FlipLearn is designed for personal use and focuses on creating, organizing, and studying flashcards across web and mobile devices. Public access and complete project documentation will be available after the initial release.",
+      "A full-stack flashcard learning platform featuring secure JWT authentication, Google OAuth, password reset via email, spaced repetition, statistics, and responsive web/mobile support. Built with Angular, Ionic, Spring Boot, PostgreSQL, and Docker. A live demo is available.",
     technologies: [
       "Angular",
       "Ionic",
@@ -45,11 +45,17 @@ const projects: Omit<ProjectCardProps, "index">[] = [
       "TypeScript",
       "Spring Boot",
       "Java",
+      "Spring Security",
+      "JWT",
       "PostgreSQL",
+      "Flyway",
       "Docker",
+      "Nginx",
+      "Render",
+      "Vercel",
     ],
     image: flipLearnImage,
-    url: "",
+    url: "https://github.com/JonathanHedrich/fliplearn-demo",
   },
   {
     title: "Percolation Lab",
