@@ -15,13 +15,13 @@ export function Contact(): string {
         <header class="contact-heading reveal">
 
           <h2>
-            Get in
-            <span>Touch</span>
+            Contact
+            <span>Me</span>
           </h2>
 
           <p>
             Have a project in mind, an interesting opportunity,
-            or just want to say hello? Feel free to reach out.
+            or just want to say hello? Feel free to contact me.
           </p>
         </header>
 

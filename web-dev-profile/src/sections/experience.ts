@@ -18,7 +18,7 @@ const experiences: ExperienceItem[] = [
     period: "2022 – 2025",
     type: "Apprenticeship as an IT Specialist for <br/> Application Development · Gesundheitsforen",
     description:
-      "Designed and developed software solutions while gaining experience in object-oriented programming, databases, software architecture, and agile development. Worked on real-world applications throughout the apprenticeship.",
+      "Designed and developed software solutions while strengthening my skills in object-oriented programming, databases, software architecture, and agile development. Contributed to real-world applications and collaborated within a professional development environment.",
   },
 ];
 

@@ -356,21 +356,21 @@ export function Skills(): string {
           </h2>
 
           <p>
-            Technologies, tools, and areas of expertise
-            I have worked with.
+            Technologies, tools, and development practices
+            I use to build modern software and web applications.
           </p>
         </div>
 
         <div class="skill-groups">
           ${createSkillGroup(
-            "Skills",
-            "Technologies and areas of expertise I have worked with.",
+            "Technical Expertise",
+            "Technologies and tools I use confidently across frontend, backend, and software development.",
             "advanced",
           )}
 
           ${createSkillGroup(
-            "Core Skills",
-            "Core tools and concepts that every practitioner should be familiar with.",
+            "Fundamental Skills",
+            "Supporting tools and foundational practices that complement my development workflow.",
             "basic",
           )}
         </div>

@@ -43,8 +43,8 @@ export function About(): string {
             <span>TypeScript</span>,
             <span>Animations</span>, 
             and modern frontend technologies. 
-            I place great importance on clean code, responsive design, 
-            and high-quality animations.
+            My priorities are clean, maintainable code,
+            responsive design, and smooth, purposeful animations.
           </p>
 
         </div>
