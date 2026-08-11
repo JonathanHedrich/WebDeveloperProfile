@@ -19,6 +19,29 @@ const certificates: Omit<CertificateCardProps, "index">[] = [
     ],
     pdfUrl: "/certificates/KI-Management.pdf",
   },
+  {
+    title: "velpTEC Cloud Computing",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Advanced training in cloud computing and DevOps, covering cloud service and deployment models, AWS, Azure and Google Cloud, containerization with Docker, Kubernetes orchestration and scaling, Infrastructure as Code, automation, monitoring, security, compliance, high availability, and cloud cost management.",
+    technologies: [
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "Ansible",
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "Prometheus",
+      "Grafana",
+      "Git",
+      "DevOps",
+      "Infrastructure as Code",
+    ],
+    pdfUrl: "/certificates/Cloud-Computing.pdf",
+  },
 ];
 
 export function Certificates(): string {
