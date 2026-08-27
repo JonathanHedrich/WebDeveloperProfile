@@ -78,6 +78,13 @@ export function Footer(): string {
                 </a>
               </p>
 
+              <p>
+                Tel.:
+                <a href="tel:+4915753685138">
+                  +49 157 53685138
+                </a>
+              </p>
+
               <h3>Responsible for editorial content</h3>
 
               <p>
@@ -141,6 +148,13 @@ export function Footer(): string {
                 Email:
                 <a href="mailto:personalcontact.jhedrich@gmail.com">
                   personalcontact.jhedrich@gmail.com
+                </a>
+              </p>
+
+              <p>
+                Tel.:
+                <a href="tel:+4915753685138">
+                  +49 157 53685138
                 </a>
               </p>
 

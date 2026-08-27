@@ -20,6 +20,21 @@ const certificates: Omit<CertificateCardProps, "index">[] = [
     pdfUrl: "/certificates/KI-Management.pdf",
   },
   {
+    title: "velpTEC Project Work AI Management",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Practical qualification project focused on the application of AI management concepts and the development of a structured approach to managing artificial intelligence initiatives.",
+    technologies: [
+      "AI Management",
+      "AI Strategy",
+      "AI Governance",
+      "Project Management",
+    ],
+    pdfUrl: "/certificates/Projektarbeit-KI-Management.pdf",
+  },
+  {
     title: "velpTEC Cloud Computing",
     issuer: "velpTEC edutainment",
     date: "2026",
@@ -41,6 +56,40 @@ const certificates: Omit<CertificateCardProps, "index">[] = [
       "Infrastructure as Code",
     ],
     pdfUrl: "/certificates/Cloud-Computing.pdf",
+  },
+  {
+    title: "velpTEC Project Work Cloud Computing",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Practical qualification project focused on the application of cloud computing concepts and the implementation of cloud systems in industrial environments.",
+    technologies: [
+      "Cloud Computing",
+      "Cloud Systems",
+      "Industrial Cloud",
+      "Cloud Architecture",
+    ],
+    pdfUrl: "/certificates/Projektarbeit-Cloud-Computing.pdf",
+  },
+  {
+    title: "velpTEC DevOps Foundation",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Foundation training in DevOps principles and practices, covering continuous integration and delivery, automated testing, deployment pipelines, release automation, continuous security, information security, telemetry, A/B testing, risk reduction, and DevOps collaboration models.",
+    technologies: [
+      "DevOps",
+      "CI/CD",
+      "Continuous Integration",
+      "Continuous Delivery",
+      "Deployment Pipelines",
+      "Automated Testing",
+      "Continuous Security",
+      "Release Automation",
+    ],
+    pdfUrl: "/certificates/DevOps-Foundation.pdf",
   },
 ];
 
