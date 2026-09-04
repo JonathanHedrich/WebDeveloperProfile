@@ -91,6 +91,21 @@ const certificates: Omit<CertificateCardProps, "index">[] = [
     ],
     pdfUrl: "/certificates/DevOps-Foundation.pdf",
   },
+  {
+    title: "Prompt Engineering",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Practical training in designing, optimizing, and evaluating prompts for modern AI models, covering structured prompting techniques, adaptive prompt optimization, token efficiency, AI-assisted text and code generation, bias management, and automation with AI APIs.",
+    technologies: [
+      "Prompt Engineering",
+      "AI APIs",
+      "Prompt Optimization",
+      "Generative AI",
+    ],
+    pdfUrl: "/certificates/Prompt-Engineering.pdf",
+  },
 ];
 
 export function Certificates(): string {
