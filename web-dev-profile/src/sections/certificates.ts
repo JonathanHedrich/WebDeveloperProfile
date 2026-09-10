@@ -106,6 +106,21 @@ const certificates: Omit<CertificateCardProps, "index">[] = [
     ],
     pdfUrl: "/certificates/Prompt-Engineering.pdf",
   },
+  {
+    title: "velpTEC Project Work Prompt Engineering",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Practical qualification project focused on the application of prompt engineering concepts and the structured design, optimization, and evaluation of prompts for AI and large language model applications.",
+    technologies: [
+      "Prompt Engineering",
+      "Generative AI",
+      "Large Language Models",
+      "Prompt Optimization",
+    ],
+    pdfUrl: "/certificates/Projektarbeit-Prompt-Engineering.pdf",
+  },
 ];
 
 export function Certificates(): string {
