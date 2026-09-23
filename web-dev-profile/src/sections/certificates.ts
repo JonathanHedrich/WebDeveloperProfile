@@ -121,6 +121,25 @@ const certificates: Omit<CertificateCardProps, "index">[] = [
     ],
     pdfUrl: "/certificates/Projektarbeit-Prompt-Engineering.pdf",
   },
+  {
+    title: "velpTEC AI Development",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Advanced training in AI development, covering natural language processing, conversational AI, voice-based AI systems, multi-channel chatbots, model training and optimization, evaluation and continuous improvement, and advanced techniques for language and dialogue processing.",
+    technologies: [
+      "Artificial Intelligence",
+      "Natural Language Processing",
+      "Conversational AI",
+      "Chatbots",
+      "Voice Bots",
+      "AI Model Training",
+      "Model Optimization",
+      "Model Evaluation",
+    ],
+    pdfUrl: "/certificates/AI-Development.pdf",
+  },
 ];
 
 export function Certificates(): string {
