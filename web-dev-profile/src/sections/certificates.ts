@@ -140,6 +140,21 @@ const certificates: Omit<CertificateCardProps, "index">[] = [
     ],
     pdfUrl: "/certificates/AI-Development.pdf",
   },
+  {
+    title: "velpTEC Project Work AI Development",
+    issuer: "velpTEC edutainment",
+    date: "2026",
+    category: "Further Training",
+    description:
+      "Practical qualification project focused on the application of AI development concepts and the implementation of artificial intelligence solutions.",
+    technologies: [
+      "Artificial Intelligence",
+      "AI Development",
+      "AI Applications",
+      "AI Systems",
+    ],
+    pdfUrl: "/certificates/Projektarbeit-AI-Development.pdf",
+  },
 ];
 
 export function Certificates(): string {
